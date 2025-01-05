@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">   
+    <title>Formulário de Contato</title>
+</head>
+<body>
+
+<form name="form_contato" method="post" action="https://exemplo.com/enviar-contato.php">
+
+    <fieldset>
+        <legend>Informações Pessoais</legend>
+        
+        <div>
+            <label>Nome:  
+                <input type="text" name="nome" id="id_nome" placeholder="Insira seu Nome Completo" size="30" maxlength="50" required>
+            </label>
+            <br>
+        </div>
+
+        <div>
+            <label>Email: 
+                <input type="email" name="email" id="id_email" placeholder="seuemail@exemplo.com" required>
+            </label>
+        </div>
+
+        <div>
+            <label>Telefone: 
+                <input type="tel" name="telefone" id="id_telefone" placeholder="(XX) XXXXX-XXXX" required>
+            </label>
+        </div>
+        
+        <div>
+            <label>Data de Nascimento: 
+                <input type="date" name="data_nascimento" id="id_data_nascimento" required>
+            </label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Mensagem</legend>
+        
+        <div>
+            <label>Assunto: 
+                <input type="text" name="assunto" id="id_assunto" placeholder="Assunto da Mensagem" size="50" maxlength="100" required>
+            </label>
+        </div>
+        
+        <div>
+            <label>Mensagem: 
+                <textarea name="mensagem" id="id_mensagem" rows="5" cols="50" placeholder="Escreva sua mensagem aqui..." required></textarea>
+            </label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Informações Adicionais</legend>
+        
+        <div>
+            <label>Idade: 
+                <input type="number" name="idade" id="id_idade" min="1" max="120" required>
+            </label>
+        </div>
+        
+        <div>
+            <label>Como você nos conheceu?
+                <select id="id_conheceu" name="conheceu" required>
+                    <option value="">Selecione...</option>
+                    <option value="Internet">Internet</option>
+                    <option value="Indicação">Indicação</option>
+                    <option value="Redes Sociais">Redes Sociais</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </label>
+        </div>
+    </fieldset>
+
+    <input type="submit" name="botaoSubmit" value="Enviar Mensagem" onclick="alert('Mensagem enviada com sucesso!');">
+    <input type="reset" name="botaoReset" value="Limpar Campos">
+
+</form>
+
+</body>
+</html>

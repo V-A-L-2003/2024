@@ -1,0 +1,124 @@
+#venda de peças
+
+#codigo_peca = float(input("código da peça"))
+#valor = float(input("código da peça"))
+#unidades = float(input("unidades"))
+'''v = float(valor)*unidades
+print("seu valor total", v,)
+print("codigo da peça",codigo_peca)
+2 a
+ dobro de um numero
+n = float(input("numero a ser dobrado"))
+x2= (n*2)
+print("o dobro é", x2)
+2 b
+print("calculadora de polinomios ")
+a = float(input("numero A"))
+b = float(input("numero B"))
+c = float(input("numero C"))
+d = float(input("numero D"))
+abcd = (a+b)*(c+d)
+print("o resultado do polinomio é",abcd)
+2 c''''''
+ni = float(input("um numero para saber seu sucessor e seu antecessor"))
+ni = float(ni+1)
+print("seu sucessor é",ni)
+ni = float(ni-2)
+print("seu antecessor é",ni)
+'''
+'''
+#2d
+pi=3.14
+raio=float(input("raio"))
+area=float(pi*raio*raio)
+print(area)
+'''
+'''
+#3a
+'a=10
+b=20
+print(b)
+b=5
+print(a,b)
+'''
+#3b
+'''a=30
+b=20
+c=a+b
+print(c)
+b=10
+print(b,c)
+c=a+b
+print(a,b,c)'''
+#3c#3a
+'''a=10
+b=20
+print(b)
+b=5
+print(a,b)
+'''
+#3b
+'''a=30
+b=20
+c=a+b
+print(c)
+b=10
+print(b,c)
+c=a+b
+print(a,b,c)'''
+#3c
+'''
+a=10
+b=20
+c=a
+b=c
+a=b
+print(a,b,c)
+'''
+#3d
+'''
+a=10
+b=a+1
+a=b+1
+b=a+1
+print(a)
+a=b+1
+print(a,b)
+'''
+#3e
+'''a=10
+b=5
+c=a+b
+b=20
+a=10
+print(a,b,c)]
+'''
+#3f
+'''x=1
+y=2
+z=y-x
+print(z)
+x=5
+y=x+z
+print(x,y,z)
+'''
+#3g
+'''
+x=2
+y=x+1
+z="x"
+w=y**2
+print(w,z)
+'''
+
+#3h
+'''import math
+x=6
+y=x**2
+w=y+x
+z="x"
+print(w,z,x)
+x=math.sqrt(y)
+w=x+2
+z="x"
+print(y,z) '''

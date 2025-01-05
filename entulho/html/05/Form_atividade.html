@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">   
+    <title>Formulário de Cadastro de Usuário</title>
+</head>
+<body>
+
+<form name="cadastro_Usuario" method="post" action="https://arquivo.devmedia.com.br/projeto/requisicao.php">
+
+    <fieldset>
+        <legend>Informações Pessoais</legend>
+        <div>
+            <label>Nome:  
+                <input type="text" name="nm_nome" id="id_nome" placeholder="Insira seu Nome Completo" required>
+            </label>
+            <br>
+        </div>
+ 
+        <div>
+            <label>Endereço: 
+                <input type="text" name="txtendereco" id="id_endereco" placeholder="Endereço Completo" required>
+            </label>
+        </div>
+        
+        <div>
+            <label>País: 
+                <input type="text" name="txtpais" id="idPais" size="6" maxlength="2" required>
+            </label>
+        </div>
+
+        <div>
+            <label>Celular: 
+                <input type="text" name="txtcelular" id="id_celular" placeholder="(XX) XXXXX-XXXX" required>
+            </label>
+        </div>
+
+        <div>
+            <label>Foto de perfil: 
+                <input type="file" name="nmFotoPerfil" id="id_fotoperfil" accept="image/*" required>
+            </label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Informações Acadêmicas</legend>
+        <div>
+            <label>Curso: 
+                <input type="text" name="nome_usuario" placeholder="Nome do Curso" required>
+            </label>
+        </div>
+        <br/>
+        <div>
+            <label>Instituição: 
+                <input type="text" name="endereco" size="50" maxlength="50" placeholder="Nome da Instituição" required>
+            </label>
+        </div>
+        <br/>
+        <div>
+            <label>Ano de Conclusão: 
+                <input type="number" name="ano_conclusao" min="1900" max="2024" required>
+            </label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Seus Interesses</legend>
+        <div>
+            <label>Linguagens de Programação:
+                <select id="idlinguagem" name="txtlinguagem" required>
+                    <option value="PHP">PHP</option>
+                    <option value="Java">Java</option>
+                    <option value="Perl">Perl</option>
+                    <option value="C++">C++</option>
+                </select>
+            </label>
+        </div>
+        <br/>
+
+        <div>
+            <label>Idiomas falados: <br> 
+                Inglês <input type="checkbox" name="nmIdioma" id="idIdioma" value="Ingles"/>
+                Espanhol <input type="checkbox" name="nmIdioma" id="idIdioma" value="Espanhol" />
+            </label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Formas de Pagamento de Preferência</legend>
+        <div>
+            <label>Pagamento: 
+                <input type="radio" value="debito" name="nmpgto" required>Cartão de Débito
+                <input type="radio" value="credito" name="nmpgto">Cartão de Crédito
+                <input type="radio" value="boleto" name="nmpgto">Boleto Bancário
+            </label>
+        </div>
+    </fieldset>
+
+    <input type="submit" name="botaoSubmit" value="Enviar dados" onclick="alert('Cadastro submetido com sucesso');">
+    <input type="reset" name="botaoreset" value="Limpar Campos">
+
+</form>
+
+</body>
+</html>
