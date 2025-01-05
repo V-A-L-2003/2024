@@ -1,102 +1,106 @@
-#atividade prática - Algoritmos sequenciais
+class AtividadePratica:
 
-match (input(""))
-'''
-#1  apresentar raiz quadrada e sua potencia quadrada
-import math
-q1a =int(input("um numero por favor"))
-q1b =math.sqrt(q1a)
-print (q1a*q1a,q1b)
-'''
-'''
-#2 area de um trapézio
-q2a = float(input("valor da base maior"))
-q2b = float(input("valor da base menor"))
-q2c = float(input("altura"))
-q2d = ((q2a+q2b)*q2c)/2
-print (q2d)
-'''
-'''
-#3 convertor d temperatura
-
-q3a = input("escolha para qual base converte fahrenheit para celsius ou celsius para fahrenheit\n\tvocê tem uma medida em F para Fahrnheit ou em C para celsius\n")
-#q3a variavel de definição de tipo de calculo
-if q3a =="f" or q3a=="F":
-    q3b = input("qual o valor em fahrenheit para converter em celsius?\n")
+    @staticmethod
+    def um():  # Calculo de hipotenusa
+        import math
+        q1a = float(input("Valor do cateto oposto: "))
+        q1b = float(input("Valor do cateto adjacente: "))
+        if q1a > 0 and q1b > 0:
+            hipotenusa = math.sqrt(q1a**2 + q1b**2)
+            print(f"A hipotenusa é: {hipotenusa}")
+        else:
+            print("Valor inválido")
     
-    try:
-            q3b = float(q3b)
-            print("A conversão é:\n", ((q3b - 32) * 5/9))
-    except ValueError:
-              print("Cálculo inválido. Tente digitar um número válido.")
-
-if q3a =="c" or q3a=="C":
-    q3c = input("qual o valor em celsius para converter em fahrenheit\n")
-    if q3c != "back" or q3c != "Back":
-        try:
-            q3c = float(q3c)
-            print("A conversão é:\n", ((q3c * 9/5) + 32))
-        except ValueError:
-              print("Cálculo inválido. Tente digitar um número válido.")
-
-'''
-#4 
-'''
-q4a = float(input("valor do lado de um quadrado "))
-q4b = q4a*q4a
-q4c = q4a+q4a
-print("area do quadrado\n",q4b,"\nperimitro do quadrado\n",q4c)
-'''
-#5
-'''
-print("calculadora de nota")
-q5a = str(input("nome do aluno: "))
-q5b = int(input("nota na prova: "))
-q5c = int(input("nota no trabalho: "))
-q5d = int(input("nota qualitativa: "))
-q5b = (q5b*5)/10
-q5c = (q5c*3)/10
-q5d = (q5d*2)/10
-q5f = q5b + q5c + q5d
-print ("media do",q5a,"é : ",q5f)
-'''
-#6
-'''
-q6a=float(input("valor da conta: "))
-q6b=float(input("numero de clientes: "))
-q6c = q6a/q6b
-print ("valor por cliente: R$",q6c)
-'''
-#7
-'''
-q7a=float(input("valor da compra: "))
-q7b= q7a/5
-q7c= q7a-(q7a*0.20)
-print("valor de compra é: R$",q7a,"\nvalor das prestações é: R$",q7b,"\nvalor a vista: R$",q7c)
-'''
-#8
-"""
-F= float(input("salário atual: "))
-A=float(input("reajuste: "))
-Z=float(input("imposto: "))
-G= F*(A*0.01)
-H= F+G
-J= H*(Z*0.01)
-K= H-J
-print("salario inicial: R$",F,"\nreajuste: R$",G,"\nimpostos: R$",J,"\nsalario final: R$",K)
-"""
-#9
-'''
-q9a=float(input("valor do jantar: R$"))
-q9b= q9a*0.10
-q9c= q9a+q9b
-print("valor do garçom: R$",q9b,"\nvalor total a pagar: R$",q9c)
-'''
-#10
-'''
-q10a=float(input("dias percoridos:"))
-q10b=float(input("hora percoridas:"))
-q10c=q10a*24
-q10d=q10c+q10b
-print("N° dias",q10a,"\nN° de horas:",q10b,"\ntotal de horas:",q10d)
-'''
+    @staticmethod
+    def dois():  # Calculo de trapezio
+        q2a = float(input("Valor da base maior: "))
+        q2b = float(input("Valor da base menor: "))
+        q2c = float(input("Altura: "))
+        area = ((q2a + q2b) * q2c) / 2
+        print(f"A área do trapézio é: {area}")
+    
+    @staticmethod
+    def tres():  # Conversão de temperatura
+        q3a = input("Escolha para qual base converter: 'F' para Fahrenheit ou 'C' para Celsius: ").strip().lower()
+        if q3a == "f":
+            q3b = float(input("Qual o valor em Fahrenheit para converter em Celsius? "))
+            celsius = (q3b - 32) * 5/9
+            print(f"A conversão é: {celsius}°C")
+        elif q3a == "c":
+            q3c = float(input("Qual o valor em Celsius para converter em Fahrenheit? "))
+            fahrenheit = (q3c * 9/5) + 32
+            print(f"A conversão é: {fahrenheit}°F")
+        else:
+            print("Opção inválida")
+    
+    @staticmethod
+    def quatro():  # Calculo de área e perímetro de um quadrado
+        q4a = float(input("Valor do lado de um quadrado: "))
+        area = q4a**2
+        perimetro = 4 * q4a
+        print(f"Área do quadrado: {area}\nPerímetro do quadrado: {perimetro}")
+    
+    @staticmethod
+    def cinco():  # Calculo de média ponderada
+        q5a = input("Nome do aluno: ")
+        q5b = float(input("Nota na prova: "))
+        q5c = float(input("Nota no trabalho: "))
+        q5d = float(input("Nota qualitativa: "))
+        media = (q5b * 5 + q5c * 3 + q5d * 2) / 10
+        print(f"A média do {q5a} é: {media}")
+    
+    @staticmethod
+    def seis():  # Calculo de valor por cliente
+        q6a = float(input("Valor da conta: "))
+        q6b = float(input("Número de clientes: "))
+        valor_por_cliente = q6a / q6b
+        print(f"Valor por cliente: R$ {valor_por_cliente}")
+    
+    @staticmethod
+    def sete():  # Calculo de valor de compra
+        q7a = float(input("Valor da compra: "))
+        prestacao = q7a / 5
+        desconto = q7a * 0.20
+        valor_a_vista = q7a - desconto
+        print(f"Valor de compra: R$ {q7a}\nValor das prestações: R$ {prestacao}\nValor à vista com desconto: R$ {valor_a_vista}")
+    
+    @staticmethod
+    def oito():  # Calculo de salário
+        q8a = float(input("Salário atual: "))
+        q8b = float(input("Reajuste (%): "))
+        q8c = float(input("Imposto (%): "))
+        reajuste = q8a * (q8b / 100)
+        salario_ajustado = q8a + reajuste
+        imposto = salario_ajustado * (q8c / 100)
+        salario_final = salario_ajustado - imposto
+        print(f"Salário inicial: R$ {q8a}\nReajuste: R$ {reajuste}\nImpostos: R$ {imposto}\nSalário final: R$ {salario_final}")
+    
+    @staticmethod
+    def nove():  # Calculo de valor de jantar
+        q9a = float(input("Valor do jantar: R$ "))
+        taxa = q9a * 0.10
+        total = q9a + taxa
+        print(f"Valor do garçom: R$ {taxa}\nValor total a pagar: R$ {total}")
+    
+    @staticmethod
+    def dez():  # Calculo de dias e horas
+        q10a = float(input("Dias percorridos: "))
+        q10b = float(input("Horas percorridas: "))
+        total_horas = (q10a * 24) + q10b
+        print(f"Número de dias: {q10a}\nNúmero de horas: {q10b}\nTotal de horas: {total_horas}")
+    
+    @staticmethod
+    def menu():
+        while True:
+            try:
+                opcao = int(input("Qual questão testar? (1-10): "))
+                if 1 <= opcao <= 10:
+                    metodo = getattr(AtividadePratica, f'{"um dois tres quatro cinco seis sete oito nove dez".split()[opcao - 1]}')
+                    metodo()
+                else:
+                    print("Opção inválida")
+            except ValueError:
+                print("Entrada inválida. Por favor, insira um número entre 1 e 10.")
+                
+if __name__ == "__main__":
+    AtividadePratica.menu()
