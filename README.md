@@ -5,6 +5,6 @@ Os scritps do meu tempo livre produzidos em 2024 ja se misturam com de 2025
 Fazem exatamente 5 dia que o ano começou.
 
 Na pasta entulho se encontra a bagunça que eu reuni durante aquele periodo
-Na pasta REFATORADOS se encontra o codigo reestruturado
+Na pasta Refatorados se encontra o codigo reestruturado
 
 Um bom 2025
