@@ -1,44 +1,35 @@
-#Algoritmo <calculadora>
+import math
 
+class Calculadora:
+    @staticmethod
+    def evaluation():
+        try:
+            expression = input("Calculadora:\n ")
+            # Ambiente seguro, permitindo apenas funções e operadores matemáticos
+            safe_env = {
+                "__builtins__": None,
+                "abs": abs,
+                "round": round,
+                "math": math,
+                "pow": pow,
+            }
+            result = eval(expression, {"__builtins__": None}, safe_env)
+            return result
+        except Exception as e:
+            return f"Erro na avaliação da expressão: {e}"
 
+    def menu(self):
+        while True:
+            w = input("Deseja fazer um cálculo? (S/N): ").upper()
+            if w == "S":
+                result = self.evaluation()
+                print(f"Resultado: {result}")
+            elif w == "N":
+                print("Encerrando a calculadora.")
+                break
+            else:
+                print("Opção inválida. Por favor, insira 'S' para sim ou 'N' para não.")
 
-#Inicio
-
-#Leia v1
-print("escolha um numero: ")
-v1 = int(input())
-#Leia v2
-print("escolha um numero: ")
-v2 = int(input())
-#Leia op
-print("escolha a operação:"" 1 para +: 2 para - :  3 para / : 4 para * ")
-op = int(input())
-#Escolha op
-match op:
-    case 1:
-    # resp = v1+v2;
-    #Escreva (resp);
-        print(v1+v2)
-
-    case 2:
-    # resp = v1-v2;
-    #Escreva ( resp);
-        print(v1-v2)
-
-    case 3:
-    # resp = v1*v2;
-    #Escreva ( resp);
-        print(v1*v2)
-
-    case 4:
-    #resp = v1/v2;
-    #Escreva ( resp);
-        print(v1/v2)
-        
-    #Caso contrario
-    case _:
-    #Escreva('Operação inválida:\n')
-        print("Opção invalida")
-
-#Fim_escolha
-#Fim
+if __name__ == "__main__":
+    c = Calculadora()
+    c.menu()
